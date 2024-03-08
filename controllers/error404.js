@@ -1,7 +1,3 @@
-const path = require('path');
-
-const rootDir = require('../utils/path');
-
-exports.errorPage = (req,res,next) => {
-    res.status(404).render('404');
-}
+exports.errorPage = (req, res, next) => {
+    res.status(404).render('404', { pageTitle: 'Page Not Found', path: '/404' });
+  };

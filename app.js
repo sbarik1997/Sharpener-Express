@@ -4,7 +4,7 @@ const path = require('path');
 const app = express();
 
 app.set('view engine', 'ejs');
-app.set('views', 'views');
+app.set('views', path.resolve('views'));
 
 const chatRouter = require('./routes/chatApp');
 const adminRouter = require('./routes/admin');
